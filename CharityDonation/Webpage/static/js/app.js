@@ -235,7 +235,11 @@ document.addEventListener("DOMContentLoaded", function() {
       this.$step.parentElement.hidden = this.currentStep >= 6;
 
       // TODO: get data from inputs and show them in summary
-    }
+      function form() {
+        var street = document.getElementById('street').value;
+        console.log(street);
+      }
+  }
 
     /**
      * Submit form
@@ -244,6 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
      */
     submit(e) {
       e.preventDefault();
+
       this.currentStep++;
       this.updateForm();
     }

@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'Webpage/base.html' %}
 
-</body>
-</html>
+{% block content %}
+
+<h2>Adres email: {{ request.user }}</h2>
+
+<h2>Imię: {{ request.user.first_name }}</h2>
+<h2>Nazwisko: {{ request.user.last_name }}</h2>
+
+
+   {% include 'Webpage/social_media.html' %}
+
+{% endblock %}
